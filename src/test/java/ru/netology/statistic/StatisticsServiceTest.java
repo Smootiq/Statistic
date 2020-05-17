@@ -16,22 +16,6 @@ class StatisticsServiceTest {
     }
 
     @Test
-    void shouldlength() {
-        StatisticsService service = new StatisticsService();
-        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
-        long actual = service.findMax( incomesInBillions );
-        long maxValue = incomesInBillions[0];
-        long expected = 12;
-        for (int i = 1; i < incomesInBillions.length; i++) {
-            if (incomesInBillions[i] > maxValue) {
-                maxValue = incomesInBillions[i];
-                expected = i + 1;
-            }
-        }
-        assertEquals(expected, actual);
-    }
-
-    @Test
     void shouldfindMaxlimit() {
         StatisticsService service = new StatisticsService();
         long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12, 19};
